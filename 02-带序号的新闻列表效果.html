@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02-带序号的新闻列表效果</title>
+    <style type="text/css">
+        body,h3,ul{
+            margin: 0px;
+            padding: 0px;
+        }
+        .news{
+            width: 360px;
+            /* height: 400px; */
+            /* background-color: red; */
+            margin: 50px auto 0px;  /* 上 左右 下*/
+            border: 1px solid #ddd;
+            padding: 15px;
+        }
+        .news h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .news ul {
+            /* border: 1px solid #000; */
+            list-style: none; /* 去掉前面的圆点 */
+        }
+        .news ul li {
+            /* border: 1px solid blue; */
+            border-bottom: 1px dotted #ddd;
+            line-height: 35px;
+            font-size: 16px;
+            
+        }
+        .news ul li a {
+            color: #333;
+            text-decoration: none;
+        }
+        .news ul li a:hover{
+            color: #315efb;
+        }
+        .news ul li a span{
+            /* border: 1px solid red; */
+            margin-right: 10px;
+            font-weight: bold;
+            /* color: #9195a3; */
+        }
+        .color1{
+            color: #FE2D46;
+        }
+        .color2{
+            color: #FF6600;
+        }
+        .color3{
+            color: #Faa90E;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <h3>百度新闻热榜</h3>
+        <ul>
+            <li><a href=""><span class="color1">1</span> 女子遭掌掴还手被认定为互殴引热议热</a></li>
+            <li><a href=""><span class="color2">2</span> 福建落水失联村干部亲属发声热</a></li>
+            <li><a href=""><span class="color3">3</span> 多地用电量整体呈现出积极信号</a></li>
+            <li><a href=""><span>4</span> 尹锡悦当面向岸田表态 韩网友怒了</a></li>
+            <li><a href=""><span>5</span> 浙江一货车与公交车相撞致1死1重伤</a></li>
+            <li><a href=""><span>6</span> 伴郎团接亲暴力破门而入新娘发怒</a></li>
+            <li><a href=""><span>7</span> 田朴珺称送了芒格一套男士护肤品</a></li>
+            <li><a href=""><span>8</span> 嫦娥五号月壤发现玻璃纤维</a></li>
+        </ul>
+<!-- 1女子遭掌掴还手被认定为互殴引热议热
+2福建落水失联村干部亲属发声热
+3多地用电量整体呈现出积极信号
+4尹锡悦当面向岸田表态 韩网友怒了
+5浙江一货车与公交车相撞致1死1重伤
+6伴郎团接亲暴力破门而入新娘发怒
+7田朴珺称送了芒格一套男士护肤品
+8嫦娥五号月壤发现玻璃纤维
+9ZARA被曝试衣间镜子比帘子长一截 -->
+    </div>
+</body>
+</html>
