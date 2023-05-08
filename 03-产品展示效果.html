@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>03-产品展示效果</title>
+    <style type="text/css">
+        body,
+        p,
+        h3 {
+            margin: 0px;
+        }
+        a{
+            text-decoration: none;   /* 去掉a标签的下划线*/
+            /* border: 1px solid red; */
+            /* 这里必须要转化为块级元素 否则会整个崩溃*/
+            display: block;
+        }
+
+        .product {
+            width: 268px;
+            /* height: 500px; */
+            /* background-color: red; */
+            margin: 50px auto 0px;
+            /* 上 左右 下 */
+            border: 1px solid #ddd;
+            /* 1像素 实线 灰色*/
+            text-align: center;
+            /* 水平居中 */
+        }
+
+        .product p.describe {
+            /* border: 1px solid red; */
+            color: #845f3f;
+            font-size: 16px;
+        }
+
+        .product .product-text {
+            /* height: 100px; */
+            background-color: #f8f8f8;
+            margin-top: 20px;
+            padding: 15px;
+        }
+
+        .product .product-text .product-mark {
+            font-size: 0px;
+            /*去掉图片空隙*/
+        }
+
+        .product .product-text .product-mark img {
+            margin: 0px 2px;
+        }
+
+        .product .product-text h3 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-top: 15px;
+            color: #000
+        }
+
+        .product .product-text p {
+            color: #a92112;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="product">
+        <a href="https://www.baidu.com/" target="_blank"> <!-- _blank在新的窗口打开-->
+            <img src="	https://gfs17.gomein.net.cn/T1nkhTBCEv1RCvBVdK_400.jpg" alt="水壶" width="195px">
+            <p class="describe">快速煮水，安心饮用</p>
+            <div class="product-text">
+                <div class="product-mark">
+                    <img src="https://img.youpin.mi-img.com/new_gms/2643a0f2_c7ec_4b40_ae6d_069891ce16a6.png" alt="小米自营"
+                        height="20">
+                    <img src="	https://img.youpin.mi-img.com/tag/4167059a2a83e6dece26ebc1300abaf8.png?w=192&h=42"
+                        alt="VIP会员" height="20">
+                    <img src="https://img.youpin.mi-img.com/new_gms/e10fd137_2e62_4ee9_8c1f_e241b8401b66.png" alt="有品秒杀"
+                        height="20">
+                </div>
+                <h3>云米电水壶</h3>
+                <p>¥ 59</p>
+            </div>
+        </a>
+    </div>
+</body>
+
+</html>
