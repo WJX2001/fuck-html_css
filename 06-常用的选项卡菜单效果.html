@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06-常用的选项卡菜单效果</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .tab {
+            width: 800px;
+            /* height: 40px; */
+            background-color: #f7f7f7;
+            border-radius: 50px;
+            margin: 50px auto 0px;
+            font-size: 0px;
+            text-align: center;
+            padding: 5px 0px;
+        }
+        .tab span {
+            border: 1px solid red;
+            height: 40px;
+            display: inline-block;
+            padding: 0px 40px;
+            line-height: 40px;
+            font-size: 16px;
+        }
+        .tab span i{
+            width: 26px;
+            height: 26px;
+            border: 1px solid red;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        .tab span i.icon1 {
+            background-image: url(./images/Gateway.png);
+        }
+        .tab span i.icon2 {
+            background-image: url(./images/Systemlogs.png);
+        }
+        .tab span i.icon3 {
+            background-image: url(./images/Gateway.png);
+        }
+        .tab span i.icon4 {
+            background-image: url(./images/right1.png);
+        }
+        .tab span i.icon5 {
+            background-image: url(./images/Gateway.png);
+        }
+        .tab span.current {
+            background-color: #fe94a9;
+            color: #fff;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <span class="current"><i class="icon1"></i>备孕期间</span>
+        <span><i class="icon2"></i>怀孕</span>
+        <span><i class="icon3"></i>0-1岁</span>
+        <span><i class="icon4"></i>1-2岁</span>
+        <span><i class="icon5"></i>2-3岁</span>
+    </div>
+</body>
+</html>
