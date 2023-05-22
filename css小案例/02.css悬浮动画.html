@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css悬浮动画</title>
+    <style>
+        .btn {
+            background-color: transparent; /*背景色透明*/
+            border-radius: 5px;
+            border: 2px solid purple;
+            color: purple;
+            padding: 10px 20px;
+            font-weight: bold;
+            position: relative;
+            /* 按钮添加过渡 让文字颜色有过渡动画 */
+            transition: all 1s;
+            overflow: hidden;
+        }
+
+        /* 准备悬浮遮罩 */
+        /* 准备一个伪元素定位盖住按钮 */
+        .btn::before {
+            content: '';
+            height: 100%;
+            width: 0%;
+            position: absolute;
+            /* left: 0px; */
+            top: 0;
+            background-color: purple;
+            /* 添加斜切 让元素倾斜 */
+            transform: skew(45deg);
+            transition: all 1s;
+            /* 降低悬浮遮罩层级 */
+            z-index: -1;
+            left: -30px;
+        }
+
+        /* 添加hover效果 */
+        .btn:hover::before {
+            width: 100%;
+            /* 调整悬浮层宽度和位置 */
+            width: 180%;
+        }
+
+        /* 调整hover时的文字颜色 */
+        .btn:hover {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 准备按钮的基础结构样式 -->
+    <button class="btn">
+        悬浮动画
+    </button>
+</body>
+</html>
