@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .inputBox{
+            position: relative;
+            width: 250px;
+        }
+        .inputBox input{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            outline: none; /* 去除元素的轮廓样式 */
+        }
+        .inputBox span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding: 10px;
+            font-size: 1em;
+            pointer-events: none;  /* 控制元素对鼠标事件的响应模式 （none:对鼠标事件不做任何响应，事件会被忽略 鼠标事件会穿透元素）*/
+            color: #ccc;
+        }
+        /* valid 或者 focus时 调整span 大小位置*/
+        .inputBox input:valid ~ span,   /*有效的表单验证输入*/
+        .inputBox input:focus ~ span {
+            color: orange;
+            transform: translateX(10px) translateY(-7px);
+            font-size: 0.65em;
+            padding: 0 10px;   /*边框被撑开的缺口*/
+            background-color: #fff;
+        }
+
+        /* 添加translation过渡动画 */
+        .inputBox span{
+            transition: all 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="inputBox">
+        <!-- requied表示用户在提交表单之前必须填写该输入字段 
+            如果用户尝试提交一个空值，浏览器会阻止表单提交                                            -->
+        <input type="text" required>
+        <span>Your name</span>
+    </div>
+</body>
+</html>
