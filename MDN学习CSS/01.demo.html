@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style></style>
+
+<body>
+  <script>
+    // 原始数据
+    let data = [{
+      id:1,
+      name: "目录1",
+      parentId: 0
+    },
+    {
+      id:2,
+      name: "目录1-1",
+      parentId: 1
+    },
+    {
+      id:3,
+      name: "目录1-2",
+      parentId: 2
+    }
+  ]
+    // 1. 先将给定的数据处理成通过children 属性进行串联的结构，方便递归处理
+    let map = {};
+    data.forEach(item => {
+      map[item.id] = item
+    })
+
+    const result = []
+
+    data.forEach(item => {
+      const parent = map[item.parentId]
+      if(parent) {
+        parent.children = parent.children || []
+        parent.children.push(item)
+      }else {
+        result.push(item)
+      }
+    })
+    console.log(result)
+ </script>
+</body>
+</html>
